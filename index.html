@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anwal Coffee Kitchen - Ouarzazate's favorite coffee spot. Fresh coffee, smoothie bowls, and healthy breakfasts.">
+    <title>Anwal Coffee Kitchen - Best Café in Ouarzazate</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons (Feather Icons via CDN) -->
+    <script defer src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Local Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Anwal Coffee Kitchen",
+      "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=600&fit=crop",
+      "description": "Modern café in Ouarzazate serving specialty coffee, smoothie bowls, and healthy breakfasts",
+      "telephone": "+212 5XX XXX XXX",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue Figuig",
+        "addressLocality": "Ouarzazate",
+        "addressCountry": "MA"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "23:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "150"
+      }
+    }
+    </script>
+    
+   
+</head>
+<body class="bg-white text-gray-800">
+    
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 bg-white shadow-md z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-amber-900">☕ Anwal Coffee</h1>
+            <button class="md:hidden" id="mobile-menu-btn" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div class="hidden md:flex gap-6">
+                <a href="#menu" class="hover:text-amber-900 transition">Menu</a>
+                <a href="#gallery" class="hover:text-amber-900 transition">Gallery</a>
+                <a href="#visit" class="hover:text-amber-900 transition">Visit</a>
+                <a href="#contact" class="hover:text-amber-900 transition">Contact</a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-50 px-4 py-4 space-y-2">
+            <a href="#menu" class="block py-2 hover:text-amber-900">Menu</a>
+            <a href="#gallery" class="block py-2 hover:text-amber-900">Gallery</a>
+            <a href="#visit" class="block py-2 hover:text-amber-900">Visit</a>
+            <a href="#contact" class="block py-2 hover:text-amber-900">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[500px] md:h-[600px] overflow-hidden">
+        <img 
+            src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=600&fit=crop" 
+            alt="Anwal Coffee Kitchen" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+        >
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                Ouarzazate's Favorite Coffee Spot
+            </h1>
+            <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl">
+                Fresh coffee, smoothie bowls, and healthy breakfasts in a cozy European-style café
+            </p>
+            <div class="flex gap-4 flex-wrap justify-center">
+                <a href="tel:+212XXXXXXXX" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition">
+                    ☎️ Call Now
+                </a>
+                <a href="#menu" class="bg-white hover:bg-gray-100 text-amber-900 px-8 py-3 rounded-lg font-semibold transition">
+                    📖 View Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-12 bg-amber-50">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <div class="text-5xl mb-2">⭐⭐⭐⭐⭐</div>
+                <h2 class="text-3xl font-bold text-amber-900 mb-2">5.0 Rating from 150+ Customers</h2>
+                <p class="text-gray-700">Join hundreds of satisfied coffee lovers</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-lg font-semibold mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="italic text-gray-700">"Amazing coffee and smoothie bowls! Best café in Ouarzazate."</p>
+                    <p class="text-sm text-gray-600 mt-2">- Fatima K.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-lg font-semibold mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="italic text-gray-700">"Proper lattes with oat milk. Cozy atmosphere and friendly staff."</p>
+                    <p class="text-sm text-gray-600 mt-2">- Sarah M.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-lg font-semibold mb-2">⭐⭐⭐⭐⭐</p>
+                    <p class="italic text-gray-700">"Best breakfast spot in Ouarzazate. Healthy options and great vibes."</p>
+                    <p class="text-sm text-gray-600 mt-2">- Ahmed B.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-amber-900 mb-12 text-center">Popular Menu Items</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Avocado Toast -->
+                <div class="bg-amber-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img 
+                        src="https://images.unsplash.com/photo-1599599810694-b5ac4dd4eae7?w=400&h=300&fit=crop" 
+                        alt="Avocado Toast" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    >
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Avocado Toast</h3>
+                        <p class="text-gray-700 mb-3">Whole grain bread with fresh avocado, lemon, and olive oil</p>
+                        <p class="text-amber-600 font-semibold">35 MAD</p>
+                    </div>
+                </div>
+
+                <!-- Smoothie Bowl -->
+                <div class="bg-amber-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img 
+                        src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=300&fit=crop" 
+                        alt="Smoothie Bowl" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    >
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Smoothie Bowl</h3>
+                        <p class="text-gray-700 mb-3">Acai base with granola, berries, and coconut flakes</p>
+                        <p class="text-amber-600 font-semibold">40 MAD</p>
+                    </div>
+                </div>
+
+                <!-- Plant-Based Latte -->
+                <div class="bg-amber-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img 
+                        src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" 
+                        alt="Oat Milk Latte" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    >
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Plant-Based Latte</h3>
+                        <p class="text-gray-700 mb-3">Specialty espresso with oat, almond, or coconut milk</p>
+                        <p class="text-amber-600 font-semibold">20–25 MAD</p>
+                    </div>
+                </div>
+
+                <!-- Muesli with Yogurt -->
+                <div class="bg-amber-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img 
+                        src="https://images.unsplash.com/photo-1588080914176-e589d044e908?w=400&h=300&fit=crop" 
+                        alt="Muesli with Yogurt" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    >
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Muesli with Yogurt</h3>
+                        <p class="text-gray-700 mb-3">Homemade muesli with Greek yogurt and fresh fruit</p>
+                        <p class="text-amber-600 font-semibold">30 MAD</p>
+                    </div>
+                </div>
+
+                <!-- Specialty Espresso -->
+                <div class="bg-amber-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img 
+                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop" 
+                        alt="Specialty Espresso" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    >
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Specialty Espresso</h3>
+                        <p class="text-gray-700 mb-3">Single-origin, specialty-grade espresso or cappuccino</p>
+                        <p class="text-amber-600 font-semibold">15–20 MAD</p>
+                    </div>
+                </div>
+
+                <!-- Pastry Combo -->
+                <div class="bg-amber-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img 
+                        src="https://images.unsplash.com/photo-1606787620996-d4d36b26eec3?w=400&h=300&fit=crop" 
+                        alt="Fresh Pastries" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    >
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Fresh Pastries</h3>
+                        <p class="text-gray-700 mb-3">Croissants, pain au chocolat, and daily fresh bakes</p>
+                        <p class="text-amber-600 font-semibold">10–15 MAD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition">
+                    📋 View Full Menu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Café Experience Gallery -->
+    <section id="gallery" class="py-16 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-amber-900 mb-12 text-center">Café Experience</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <img 
+                    src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=600&h=400&fit=crop" 
+                    alt="Interior seating" 
+                    class="rounded-lg shadow-lg w-full h-64 object-cover"
+                    loading="lazy"
+                >
+                <img 
+                    src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&h=400&fit=crop" 
+                    alt="Coffee preparation" 
+                    class="rounded-lg shadow-lg w-full h-64 object-cover"
+                    loading="lazy"
+                >
+                <img 
+                    src="https://images.unsplash.com/photo-1514432324607-2e467f4af445?w=600&h=400&fit=crop" 
+                    alt="Table setup" 
+                    class="rounded-lg shadow-lg w-full h-64 object-cover"
+                    loading="lazy"
+                >
+                <img 
+                    src="https://images.unsplash.com/photo-1533134242443-742f219fac5d?w=600&h=400&fit=crop" 
+                    alt="Outdoor seating" 
+                    class="rounded-lg shadow-lg w-full h-64 object-cover"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Customers Love Us -->
+    <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-amber-900 mb-12 text-center">Why Customers Love Us</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl mb-4">☕</div>
+                    <h3 class="font-bold text-amber-900 mb-2">Specialty Coffee</h3>
+                    <p class="text-gray-700 text-sm">Single-origin, expertly roasted beans</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="font-bold text-amber-900 mb-2">Plant-Based</h3>
+                    <p class="text-gray-700 text-sm">Vegan & dairy-free options</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="font-bold text-amber-900 mb-2">Cozy Space</h3>
+                    <p class="text-gray-700 text-sm">Comfortable atmosphere & WiFi</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">👥</div>
+                    <h3 class="font-bold text-amber-900 mb-2">Friendly Staff</h3>
+                    <p class="text-gray-700 text-sm">Warm hospitality & service</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="font-bold text-amber-900 mb-2">Affordable</h3>
+                    <p class="text-gray-700 text-sm">Quality at fair prices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Us Section -->
+    <section id="visit" class="py-16 bg-amber-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-amber-900 mb-12 text-center">Visit Us Today</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Location Info -->
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md mb-6">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-4">📍 Location</h3>
+                        <p class="text-gray-700 mb-6">
+                            <strong>Anwal Coffee Kitchen</strong><br>
+                            Rue Figuig<br>
+                            Ouarzazate, Morocco
+                        </p>
+                        <a 
+                            href="https://maps.google.com/?q=Anwal+Coffee+Kitchen+Rue+Figuig+Ouarzazate" 
+                            target="_blank" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition inline-block"
+                        >
+                            🗺️ Get Directions
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-4">⏰ Hours</h3>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Monday – Sunday</strong></p>
+                            <p>08:00 AM – 11:00 PM</p>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">Closed only on major holidays</p>
+                    </div>
+                </div>
+
+                <!-- Map & CTA -->
+                <div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3389.4478481234567!2d-6.859!3d30.927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAnwal%20Coffee%20Kitchen!5e0!3m2!1sen!2sma!4v1234567890" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;border-radius:8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-lg shadow-md mb-6"
+                    >
+                    </iframe>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <p class="text-gray-700 mb-4">Ready to experience the best coffee in Ouarzazate?</p>
+                        <a 
+                            href="tel:+212XXXXXXXX" 
+                            class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold transition inline-block"
+                        >
+                            ☎️ Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-2xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-amber-900 mb-8 text-center">Send Us a Message</h2>
+            <form class="bg-amber-50 p-8 rounded-lg shadow-md" id="contact-form" onsubmit="handleFormSubmit(event)">
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2" for="name">
+                        Your Name
+                    </label>
+                    <input 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-600" 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required
+                    >
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2" for="phone">
+                        Phone Number
+                    </label>
+                    <input 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-600" 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        required
+                    >
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2" for="message">
+                        Message
+                    </label>
+                    <textarea 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-600 resize-none" 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        required
+                    ></textarea>
+                </div>
+
+                <button 
+                    class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 rounded-lg transition" 
+                    type="submit"
+                >
+                    📧 Send Message
+                </button>
+                <p class="text-sm text-gray-600 mt-4 text-center">
+                    We'll respond within 2 hours during business hours
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-8">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-2">☕ Anwal Coffee Kitchen</h3>
+            <p class="mb-4">Ouarzazate's favorite coffee spot</p>
+            <div class="flex justify-center gap-4 mb-6">
+                <a href="tel:+212XXXXXXXX" class="hover:text-amber-100 transition">📞 Call</a>
+                <a href="https://maps.google.com" target="_blank" class="hover:text-amber-100 transition">📍 Maps</a>
+                <a href="#contact" class="hover:text-amber-100 transition">💬 Message</a>
+            </div>
+            <p class="text-amber-100 text-sm">
+                © 2026 Anwal Coffee Kitchen. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA Buttons (Mobile) -->
+    <div class="sticky-cta md:hidden bg-amber-600 shadow-lg flex gap-2 p-2">
+        <a 
+            href="tel:+212XXXXXXXX" 
+            class="flex-1 bg-amber-700 hover:bg-amber-800 text-white py-3 rounded font-semibold text-center transition"
+        >
+            ☎️ Call
+        </a>
+        <a 
+            href="https://maps.google.com" 
+            target="_blank"
+            class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-semibold text-center transition"
+        >
+            🗺️ Map
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // You can replace this with your backend endpoint
+            const whatsappMessage = `Hello! I'm ${name}. Phone: ${phone}. Message: ${message}`;
+            const whatsappLink = `https://wa.me/212XXXXXXXX?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Option 1: Send via WhatsApp (uncomment to use)
+            // window.open(whatsappLink, '_blank');
+
+            // Option 2: Send via Email (requires backend)
+            // Implement your email service here (Formspree, EmailJS, etc.)
+            
+            // For now, show success message
+            alert('Thank you for your message! We will contact you soon.');
+            document.getElementById('contact-form').reset();
+        }
+
+        // Initialize feather icons
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+    </script>
+</body>
+</html>
