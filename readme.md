@@ -1,35 +1,38 @@
-# ☕ Anwal Coffee Kitchen - Landing Page
+# ☕ Anwal Coffee Kitchen - Site Web
 
-Hada projet dyal wahed l-**Landing Page** modern khassa b café f maghrib (Ouarzazate). Design mssawb bach ykoun simple, nqi, u kay-attiri l-klyan b t-tsawer u l-atmine dyal l-menu.
+Bienvenue dans le dépôt de la page d'accueil (Landing Page) d'**Anwal Coffee Kitchen**, le café incontournable d'Ouarzazate. Ce projet est une vitrine moderne conçue pour offrir une expérience utilisateur fluide et mettre en avant nos spécialités.
 
-## ✨ Khassiyat l-Projet (Features)
+## 🚀 Caractéristiques
 
-* **Responsive Design:** Khdam mzyan f ga3 l-ajhiza (Mobile, Tablet, Desktop).
-* **Tailwind CSS:** Mkhdam b framework dyal l-utility-first bach l-page tji khfifa u stylish.
-* **SEO & Schema:** Fiha `JSON-LD` Local Business markup bach Google y3ref l-café, blasa, u ratings.
-* **Sections:**
-    * **Hero:** Unwan kbir u boutons dyal l-ittissal.
-    * **Social Proof:** T9yim dyal l-klyan (5.0 stars).
-    * **Menu:** Ahsan l-atba9 (Avocado Toast, Smoothie Bowls, Specialty Coffee).
-    * **Visit Us:** Fiha l-blasa (Map), l-wa9t dyal l-khidma, u ra9m l-hatif.
-    * **Contact:** Formulaire bssit bach l-klyan yssifto rissala.
+* **Design Responsive :** Optimisé pour tous les écrans (Mobiles, Tablettes et Ordinateurs).
+* **Performance :** Construit avec **Tailwind CSS** via CDN pour un chargement rapide et un style épuré.
+* **Référencement (SEO) :** * Balises Meta optimisées.
+    * **Schema Markup (JSON-LD) :** Intégration de données structurées pour aider Google à afficher les horaires, l'adresse et la note du café.
+* **Sections Incluses :**
+    * **Héros :** Appel à l'action immédiat (Appel / Menu).
+    * **Menu Populaire :** Présentation visuelle des spécialités avec prix (Healthy bowls, Avocado toasts, Café de spécialité).
+    * **Témoignages :** Preuve sociale avec une note de 5.0 basée sur les avis clients.
+    * **Infos Pratiques :** Horaires d'ouverture et intégration de carte Google Maps.
+    * **Contact :** Formulaire prêt à l'emploi.
 
-## 🛠️ Tiknolojiyat l-mkhdama (Tech Stack)
+## 🛠️ Technologies utilisées
 
-* **HTML5** - Tarkiba dyal l-page.
-* **Tailwind CSS** - Stylisation (via CDN).
-* **JavaScript** - Bach n-toggliw l-mobile menu.
-* **Feather Icons** - Icons dyal l-interface.
+* **HTML5** : Structure sémantique.
+* **Tailwind CSS** : Framework utilitaire pour le design.
+* **JavaScript** : Gestion du menu mobile et des interactions.
+* **Feather Icons** : Pack d'icônes légères.
 
-## 📁 Kifach tkhdem bih
+## 📁 Installation et Utilisation
 
-1.  Copi l-code l-kamel f wahed l-fichier smiytu `index.html`.
-2.  Hell l-fichier f ayy browser (Chrome, Safari, Edge...).
-3.  **Molahada:** Men l-ahssan tbedel ra9m l-hatif `+212XXXXXXXX` b ra9m l-ha9i9i dyal l-café.
+1.  **Cloner ou copier** le code du fichier `index.html`.
+2.  **Ouvrir** le fichier dans votre navigateur préféré.
+3.  **Personnalisation :**
+    * Remplacez les numéros de téléphone par le vrai numéro : `+212XXXXXXXX`.
+    * Modifiez les liens d'images Unsplash par vos propres photos réelles pour plus d'authenticité.
 
-## 📸 T-tsawer
-L-projet mkhdam b t-tsawer men **Unsplash** (Placeholders). Ila bghiti t-personnaliser l-page, bedel l-links dyal `src` f l-images b t-tsawer l-wa9i3iya dyal l-café.
+## 📋 Structure du Projet
 
----
-
-**Developed for Anwal Coffee Kitchen - Ouarzazate** 🇲🇦
+```bash
+.
+├── index.html       # Fichier principal contenant le HTML et les styles Tailwind
+└── README.md        # Documentation du projet
